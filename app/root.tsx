@@ -9,6 +9,7 @@ export default function App() {
       </head>
       <body>
         <Outlet />
+        Hello world
         {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
       </body>
     </html>
