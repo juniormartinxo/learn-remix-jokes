@@ -4,11 +4,13 @@ Para iniciar os estudos irei realizar o tutorial proposto no site do Remix - [Jo
 
 ## Motivação
 
+---
+
 Testar para ver se é a melhor opção para criar meu site pessoal utilizando REMIX.
 
 ## Estrutura do projeto REMIX
 
-=======
+---
 
 - `app/` - todo código vai aqui
 - `app/entry.client.tsx` - usado para dar um React.hydrate() nos componentes
@@ -20,11 +22,15 @@ Testar para ver se é a melhor opção para criar meu site pessoal utilizando RE
 
 ## Rotas
 
+---
+
 É possível criar rotas no REMIX tanto no arquivo `remix.config.js`, quanto através do meio do sistema de arquivos. Isso é chamado de `"file-based routing"`.
 
 Cada arquivo inserido no diretório `app/routes/`será chamado pelo `Route Module` e se transformará em uma rota.
 
 ## Outlet
+
+---
 
 O `outlet` é um componente que deve ser colocado em uma elemento de rota pai para carregar elementos de rota filhos.
 Outlet permite que sejam criadas várias urls filhas, para isto basta criar um componente na raiz da pasta `routes` que possua o componente Outlet e depois criar um diretório com o mesmo nome deste arquivo, exemplo:
@@ -40,4 +46,22 @@ app/routes/jokes/*
 app/routes/jokes/$jokeId
 ```
 
-Para criar rotas parametrizadas devem ser criados arquivos dentro dos diretórios com o símobolo sifrão `($)` na frente.
+Para criar rotas parametrizadas devem ser criados arquivos dentro dos diretórios com o símbolo sifrão `($)` na frente.
+
+## Estilos
+
+---
+
+Você pode criar uma folha de estilos para cada rota ou uma geral a diferença é quando e onde elas irão carregar. Para criar estilos exclusivos para uma rota basta adicioná-lo apenas onde se quer que aquele estilo funcione, caso contrário adicione nas rotas pais. Lembre-se sempre que no arquivo `root` deve ser inserido entre as tags `head` o componente `<Links />`. Exemplo:
+
+```
+<head>
+    <meta charSet='utf-8' />
+    <title>Remix: So great, it's funny!</title>
+    <Links />
+</head>
+```
+
+### LinksFunctions()
+
+`LinksFunctions` propõe uma função que retorna um objeto com várias folhas de estilo que serão adicionadas em cascata na página que está sendo chamada.
