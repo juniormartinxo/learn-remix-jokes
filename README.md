@@ -65,3 +65,7 @@ Você pode criar uma folha de estilos para cada rota ou uma geral a diferença �
 ### LinksFunctions()
 
 `LinksFunctions` propõe uma função que retorna um objeto com várias folhas de estilo que serão adicionadas em cascata na página que está sendo chamada.
+
+### Styled-components
+
+É possível usar, mas é aconselhável utilizar abordagens mais básicas com o uso de CSS puro, ou main ainda, o uso do Tailwind 🤔
