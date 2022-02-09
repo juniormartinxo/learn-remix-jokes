@@ -1,0 +1,1 @@
+window.__remixManifest={"version":"eb9da117","entry":{"module":"/build/entry.client-S4OKD7JV.js","imports":["/build/_shared/chunk-NOUPZE4Z.js"]},"routes":{"root":{"id":"root","path":"","module":"/build/root-A34BJPVD.js","hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false}},"url":"/build/manifest-EB9DA117.js"};
