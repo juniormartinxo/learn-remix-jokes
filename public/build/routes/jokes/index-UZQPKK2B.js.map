@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["browser-route-module:D:\\webapps\\remix-jokes\\app\\routes\\jokes\\index.tsx?browser", "../../../../app/routes/jokes/index.tsx"],
-  "sourcesContent": ["export { default } from \"D:\\\\webapps\\\\remix-jokes\\\\app\\\\routes\\\\jokes\\\\index.tsx\";", "export default function JokesIndexRoute() {\r\n  return (\r\n    <div>\r\n      <p>Here's a random joke:</p>\r\n      <p>I was wondering why the frisbee was getting bigger, then it hit me.</p>\r\n    </div>\r\n  )\r\n}\r\n"],
-  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,2BAA2B;AACxC,SACE,oCAAC,OAAD,MACE,oCAAC,KAAD,MAAG,0BACH,oCAAC,KAAD,MAAG;AAAA;",
-  "names": []
-}

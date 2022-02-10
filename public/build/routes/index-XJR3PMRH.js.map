@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["browser-route-module:D:\\webapps\\remix-jokes\\app\\routes\\index.tsx?browser", "../../../app/routes/index.tsx"],
-  "sourcesContent": ["export { default, links } from \"D:\\\\webapps\\\\remix-jokes\\\\app\\\\routes\\\\index.tsx\";", "import type { LinksFunction } from 'remix'\r\nimport { Link } from 'remix'\r\nimport stylesUrl from '../styles/index.css'\r\n\r\nexport const links: LinksFunction = () => {\r\n  return [\r\n    {\r\n      rel: 'stylesheet',\r\n      href: stylesUrl,\r\n    },\r\n  ]\r\n}\r\n\r\nexport default function IndexRoute() {\r\n  return <div>Hello Index Route</div>\r\n}\r\n"],
-  "mappings": ";;;;;;AAAA;;;ACAA;;;;;;AAIO,IAAM,QAAuB,MAAM;AACxC,SAAO;AAAA,IACL;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA;AAAA;AAAA;AAKG,sBAAsB;AACnC,SAAO,oCAAC,OAAD,MAAK;AAAA;",
-  "names": []
-}
