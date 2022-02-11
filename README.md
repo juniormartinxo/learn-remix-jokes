@@ -8,6 +8,16 @@ Para iniciar os estudos irei realizar o tutorial proposto no site do Remix - [Jo
 
 Testar para ver se é a melhor opção para criar meu site pessoal utilizando REMIX.
 
+## Setup
+
+Rode:
+
+`npm install`
+
+`npx prisma db push`
+
+`npx prisma db seed`
+
 ## Estrutura do projeto REMIX
 
 ---
