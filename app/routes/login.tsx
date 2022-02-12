@@ -1,12 +1,19 @@
-import type { ActionFunction, LinksFunction } from 'remix'
-import { useActionData, json, Link, useSearchParams } from 'remix'
+import type { ActionFunction, LinksFunction, MetaFunction } from 'remix'
+import { useActionData, json, useSearchParams, Link } from 'remix'
 
 import { db } from '~/utils/db.server'
-import { login, createUserSession, register } from '~/utils/session.server'
+import { createUserSession, login, register } from '~/utils/session.server'
 import stylesUrl from '~/styles/login.css'
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesUrl }]
+}
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'Remix Jokes | Login',
+    description: 'Login to submit your own jokes to Remix Jokes!',
+  }
 }
 
 function validateUsername(username: unknown) {
@@ -64,7 +71,6 @@ export const action: ActionFunction = async ({ request }) => {
   switch (loginType) {
     case 'login': {
       const user = await login({ username, password })
-      console.log({ user })
       if (!user) {
         return badRequest({
           fields,
@@ -72,13 +78,6 @@ export const action: ActionFunction = async ({ request }) => {
         })
       }
       return createUserSession(user.id, redirectTo)
-      /*
-      // if there is a user, create their session and redirect to /jokes
-      return badRequest({
-        fields,
-        formError: 'Not implemented',
-      })
-      */
     }
     case 'register': {
       const userExists = await db.user.findFirst({
@@ -98,14 +97,6 @@ export const action: ActionFunction = async ({ request }) => {
         })
       }
       return createUserSession(user.id, redirectTo)
-      /*
-      // create the user
-      // create their session and redirect to /jokes
-      return badRequest({
-        fields,
-        formError: 'Not implemented',
-      })
-      */
     }
     default: {
       return badRequest({
